@@ -39,6 +39,7 @@ const Pokemon = () => {
                                     <Chip
                                         color="primary"
                                         label={ability.ability.name}
+                                        key={ability.ability.name}
                                     />
                                 ))
                             }
@@ -50,6 +51,7 @@ const Pokemon = () => {
                                     <Chip
                                         color="primary"
                                         label={move.move.name}
+                                        key={move.move.name}
                                     />
                                 ))
                             }

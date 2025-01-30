@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router'
 import { ArrowCircleLeftOutlined, ArrowCircleRightOutlined } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
-import { capitalizeFirstWord } from '../misc/utils';
+import PokemonItemCard from './PokemonItemCard';
 
 const ListPokemons = ({ pokemons, setPagination }) => {
     const [previous, setPrevious] = useState(null)
@@ -24,11 +23,7 @@ const ListPokemons = ({ pokemons, setPagination }) => {
                         <div className='list-container'>
                             {
                                 pokemons.results.map((pokemon) => (
-                                    <div className='list-item-card'>
-                                        <NavLink to={pokemon.name} key={pokemon.name} className='list-item-card__title'>
-                                            <h3 to={pokemon.name}>{capitalizeFirstWord(pokemon.name)}</h3>
-                                        </NavLink>
-                                    </div>
+                                    <PokemonItemCard pokemon={pokemon} key={pokemon.name} />
                                 ))
                             }
 

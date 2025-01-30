@@ -14,6 +14,24 @@ h3, p, h4 {
   color: white;
 }
 
+.home__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home__link--active {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.home__link--inactive {
+  pointer-events: none;
+}
+
+.home__link--active:hover {
+  opacity: 1;
+}
 
 .container {
   width: 100%;
@@ -25,7 +43,7 @@ h3, p, h4 {
   text-decoration: none;
   color: #61dafb;
   opacity: 0.7;
-
+  transition: all 0.5s ease;
 }
 
 .list-container {
@@ -47,7 +65,7 @@ h3, p, h4 {
   padding: 1rem;
   box-shadow: -1px -1px 10px -4px rgba(242,242,242,1);
   border-radius: .5rem;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   justify-content: center;
 }
 
@@ -60,13 +78,15 @@ h3, p, h4 {
   padding: 1rem;
   width: fit-content;
   text-decoration: none;
-  transition: all 0.3s ease;
+  justify-content: space-between;
+  transition: all 0.5s ease;
   flex-direction: column;
 }
 
 .item-container-image{
   aspect-ratio: 16 / 9;
   width: 100%;
+  margin: auto;
   display: flex;
 }
 
@@ -117,6 +137,9 @@ h3, p, h4 {
     width: 42%;
   }
 
+  .item-container-image{
+    width: 70%;
+  }
   .item-card {
     width: 80%;
     margin: auto;
@@ -131,5 +154,9 @@ h3, p, h4 {
   .item-card {
     width: 70%;
     margin: auto;
+  }
+
+  .item-container-image{
+    width: 50%;
   }
 }

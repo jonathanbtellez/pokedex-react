@@ -1,11 +1,13 @@
-import { Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 function Dashboard() {
   return (
     <div className="App">
-      <header>
+      <NavLink to={'/'} className={({ isActive }) =>
+        isActive ? "home__link home__link--inactive" : " home__link home__link--active"
+      }>
         <h1>Pokedex</h1>
-      </header>
+      </NavLink>
       <main className='container'>
         <Outlet />
       </main>
